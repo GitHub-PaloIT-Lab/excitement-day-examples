@@ -1,0 +1,6 @@
+create a backlog item for the selected code to fix sql injection. Backlog item should have following attributes :
+- Clear and concise description,
+- acceptance criteria,
+- priority,
+- estimate of effort, and
+- clear relationship to end-user needs.
