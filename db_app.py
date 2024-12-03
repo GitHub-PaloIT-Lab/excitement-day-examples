@@ -54,15 +54,12 @@ class UserResource(Resource):
 
 
        try:
-           # Directly incorporating user input into the SQL query
-           rawQueryString = f"SELECT * FROM user WHERE id = {id}"
-           query = text(rawQueryString)
+           # Use parameterized query to prevent SQL injection
+           query = text("SELECT * FROM user WHERE id = :id")
 
-
-           # Execute the vulnerable query
-           result = db.session.execute(query)
+           # Execute the safe query with parameter
+           result = db.session.execute(query, {'id': id})
            user = result.fetchall()
-
 
            if user:
                return user
