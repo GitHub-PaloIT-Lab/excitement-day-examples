@@ -28,3 +28,4 @@ module modKeyVault 'br/public:avm/res/key-vault/vault:0.9.0' = {
   }
 }
 ```
+Every time i create a new markdown file in english, please translate it to italian. Put this translation in a new file, with the same filenmae but prefixed wit it_
