@@ -81,6 +81,8 @@ def api_spec():
 
 
 if __name__ == '__main__':
+   import os
    with app.app_context():
        db.create_all()
-   app.run(debug=True, port=4000)
+   debug_mode = os.getenv('FLASK_DEBUG', 'False').lower() in ['true', '1', 't']
+   app.run(debug=debug_mode, port=4000)
